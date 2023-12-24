@@ -15,7 +15,6 @@ public class UserService {
     }
 
     public User[] save(User user) {
-        //todo проверить как в оригинале
         userRepository.save(user);
         User[] response = new User[1];
         response[0] = user;
