@@ -89,7 +89,7 @@ curl -i -X GET http://127.0.0.1:5001/api/user
 * **Sample Call**
 
 ```shell
-curl -i -X POST http://127.0.0.1:5001/api/user -H 'Content-Type: application/json' -d '{"email":"user@example.com" ,"password_hash":"password_hash"}'
+curl -i -X POST http://127.0.0.1:5001/api/user -H 'Content-Type: application/json' -d '{"username" : "user123","email":"user@example.com" ,"password_hash":"password_hash"}'
 ```
 
 License
