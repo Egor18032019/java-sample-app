@@ -3,7 +3,7 @@
 Применяемые технологии: Spring Boot, PostgreSQL
 ***
 # Deployment
-Создать бд 'users' в ручную или в контейнере
+Создать бд 'users' через интерфейс или через докер как показано ниже
 ```shell
 docker run --name users -p 5432:5432 -e POSTGRES_PASSWORD=postgres -e POSTGRES_DB=users -d postgres:11-alpine
 ```
@@ -103,15 +103,4 @@ Author Information
 This app was created in 24.12.2023 by [Egor](https://github.com/Egor18032019).
 
 
-
-
-
-```shell
-curl -i -X GET http://127.0.0.1:5001/api/user
-```
-```shell
-curl -i -X POST http://127.0.0.1:5001/api/user -H 'Content-Type: application/json' -d '{"email":"user@example.com" ,"password_hash":"password_hash"}'
-```
-```shell
-curl -i -X POST http://127.0.0.1:8080/api/user -H 'Content-Type: application/json' -d '{  "email":"user@example.com" ,"password_hash":"password_hash"}'
-```
+ 
