@@ -18,7 +18,7 @@ target/
 *.iws
 *.iml
 *.ipr
-
+.mvn/timing.properties
 ### NetBeans ###
 /nbproject/private/
 /nbbuild/
