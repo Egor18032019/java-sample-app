@@ -15,10 +15,9 @@ public class UserService {
         this.userRepository = userRepository;
     }
 
-    public User[] save(User user) {
+    public User[] save(UserRequest user) {
         User userForDB = new User(user.getUsername(),user.getEmail(),user.getPassword_hash());
         userForDB =userRepository.save(userForDB);
-
         User[] response = new User[1];
         response[0] = userForDB;
         return response;

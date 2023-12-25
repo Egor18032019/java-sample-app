@@ -1,6 +1,7 @@
 package com.example.soft.controllers;
 
 import com.example.soft.exception.BadRequestException;
+import com.example.soft.schemas.UserRequest;
 import com.example.soft.service.UserService;
 import com.example.soft.store.User;
 import com.example.soft.utils.EndPoint;
@@ -36,7 +37,7 @@ public class RoutesController {
             description = "На вход ждет User"
     )
     @PostMapping(value = EndPoint.user)
-    public User[] createUser(@RequestBody User user) {
+    public User[] createUser(@RequestBody UserRequest user) {
 
         try {
             boolean email = user.getEmail().isBlank();

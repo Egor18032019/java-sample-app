@@ -14,7 +14,6 @@ import lombok.Setter;
 public class UserRequest {
     @Schema(description = "username")
     private String username;
-
     @Schema(description = "email")
     private String email;
     @Schema(description = "password_hash")
