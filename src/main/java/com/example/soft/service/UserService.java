@@ -1,5 +1,6 @@
 package com.example.soft.service;
 
+import com.example.soft.schemas.UserRequest;
 import com.example.soft.store.User;
 import com.example.soft.store.repository.UserRepository;
 import org.springframework.stereotype.Service;
@@ -15,9 +16,11 @@ public class UserService {
     }
 
     public User[] save(User user) {
-        userRepository.save(user);
+        User userForDB = new User(user.getUsername(),user.getEmail(),user.getPassword_hash());
+        userForDB =userRepository.save(userForDB);
+
         User[] response = new User[1];
-        response[0] = user;
+        response[0] = userForDB;
         return response;
     }
 
