@@ -17,7 +17,6 @@ import org.springframework.web.bind.annotation.*;
 @FieldDefaults(level = AccessLevel.PRIVATE, makeFinal = true)
 public class RoutesController {
     UserService userService;
-
     public RoutesController(UserService userService) {
         this.userService = userService;
     }
@@ -28,7 +27,6 @@ public class RoutesController {
     )
     @GetMapping(value = EndPoint.user)
     public User[] showUsers() {
-
         return userService.getAllUsers();
     }
 

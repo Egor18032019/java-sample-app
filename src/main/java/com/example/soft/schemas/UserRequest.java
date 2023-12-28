@@ -10,7 +10,7 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-@Schema(description = "координаты офиса и его загрузка")
+@Schema(description = "имя,почта и пароль пользователя")
 public class UserRequest {
     @Schema(description = "username")
     private String username;
